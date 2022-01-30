@@ -86,7 +86,7 @@ class KerasNumpyModule:
 		#	x = ( x @ self.)
 
 		for layer_name in self.numpy_module_dict: 
-			if layer_name["type"] == layers.Dense: 
+			if self.numpy_module_dict[layer_name]["type"] == layers.Dense: 
 				x = (x @ self.numpy_module_dict[layer_name]["weights"] + self.numpy_module_dict[layer_name]["bias"]) 
 				if self.numpy_module_dict[layer_name]["activation"] == "relu": 
 					x = numpy.minimum(numpy.maximum(0, x), 6) # ReLU 6 
