@@ -18,7 +18,7 @@ KerasDataset= Iterable[keras.Tensor] # need to change
 NPDataset = Iterable[np.ndarray] 
 
 def convert_torch_keras_or_numpy_array_to_numpy_array(
-	keras_tensor_or_numpy_array: Union[keras.Tensor, np.ndarray]
+	keras_tensor_or_numpy_array: Union[tf.Tensor, np.ndarray]
 ) -> np.ndarray: 
 	"""Convert a keras tensor or a numpy array to a numpy array. 
 
